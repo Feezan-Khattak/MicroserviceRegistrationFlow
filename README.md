@@ -4,11 +4,8 @@ the flow. This flow contains several microservices to complete
 the registeration flow.
 
 # Sequence Diagram
-<<<<<<< HEAD
 ![Sequence Diagram](images/sequenceDiagram.jpg "Sequece Diagram to show different microservices flows communication")
-=======
-![images/sequenceDiagram.jpg](./images/sequenceDiagram.jpg "Sequece Diagram to show different microservices flows communication")
->>>>>>> 6f0d7ed5e28a0f199c94038d81cd6add7ea266b7
+
 
 As you see in the above sequence diagram the third party App (it may anything
 like webapp, mobile app or third party API). It will the request from it
