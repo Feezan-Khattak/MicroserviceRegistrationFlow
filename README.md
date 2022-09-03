@@ -13,6 +13,11 @@ and forward it to the reqisteration service, it will first send the event
 to the Event publisher and save it into the database for future use.
 Also, It will send the data to the main database to store the user data.
 
+# Flow Diagram
+The overall flow of these microservices' architecture is;
+
+![Component Diagram](images/componentDiagram.jpg "Component diagram")
+
 # Clone and Run the project
 you can clone and run the project by cloning this project as;
 
