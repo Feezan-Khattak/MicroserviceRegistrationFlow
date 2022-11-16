@@ -6,28 +6,34 @@ import co.greedycode.RegistrationService.dto.*;
 import co.greedycode.RegistrationService.utils.ServiceInfoUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.mock.mockito.MockBeans;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
+@ActiveProfiles("default")
 public class RegistrationServiceTest {
 
-    @Mock
+    @MockBean
     private EventClient eventClient;
-    @Mock
+    @MockBean
     private GraphqlClient graphqlClient;
-    @Mock
+    @MockBean
     private ServiceInfoUtil serviceInfoUtil;
 
     private RegistrationService registrationService;
 
-    @Before
+    @BeforeEach
     public void setUp(){
         registrationService = new RegistrationService(eventClient, graphqlClient, serviceInfoUtil);
     }

@@ -24,7 +24,7 @@ import static co.greedycode.EventPublisher.client.GraphqlMutation.LOG_EVENT_MUTA
 @Slf4j
 public class GraphqlClient {
 
-    @Value("${event.publisher.url}")
+    @Value("${graphql.url}")
     private String graphqlUrl;
 
     private final RestTemplate restTemplate;
